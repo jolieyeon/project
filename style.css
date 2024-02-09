@@ -437,15 +437,16 @@ text-decoration: azure;
 .awareness h3{
     font-size: 50px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color:#e84393;
+    color:#5F83CC;
     padding-bottom: 20px;
 }
 
 .awareness p {
 font-size: 25px;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-color: cadetblue;
+color:#c383c3;
 font-weight: 200;
+font-weight:550;
 
 }
 
@@ -476,15 +477,15 @@ font-weight: 200;
 .info h3{
     font-size:50px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color:#232ea7;
+    color:#cca85f;
     padding-bottom: 20px;
 }
 
 .info p {
 font-size: 25px;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-color: rgb(160, 150, 95);
-font-weight: 200;
+color:#429292;
+font-weight: 550;
 
 }
 
@@ -799,7 +800,22 @@ font-weight: 200;
 }
 
 
-/* Existing CSS styles... */
+.vid {
+    text-align: center; /* Center-align the content within the section */
+  }
+  
+  .vid h3 {
+    margin-top: 40px; /* Adjust margin as needed */
+    margin-bottom: 40px;
+    color:#5F83CC;
+    font-size: x-large;
+  }
+  
+  .vid video {
+    display: block;
+    margin: 0 auto; /* Center the video horizontally within the section */
+  }
+
 
 /* Media query for devices with a maximum width of 700px (typical for iPhones) */
 @media (max-width: 700px) {
@@ -860,9 +876,7 @@ font-weight: 200;
     }
 
     .card__image {
-        width: 8em; /* Decrease width */
-        height: 8em; /* Decrease height */
-        margin-bottom: 1em; /* Reduce margin */
+        /* Remove styling for card images */
     }
 
     .card__title {
@@ -931,4 +945,85 @@ font-weight: 200;
     }
 
     /* Additional adjustments as needed */
+}
+
+
+.slider-container .swiper {
+    width: 100%;
+}
+
+.slider-container .swiper-wrapper {
+    width: 100%;
+    height: 35em;
+    display: flex;
+    align-items: center;
+}
+
+.slider-container .card {
+    width: 20em;
+    height: 90%;
+    background-color: #fff;
+    border-radius: 2em;
+    box-shadow: 0 0 2em rgba(0, 0, 0, .2);
+    padding: 2em 1em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 2em;
+}
+
+.slider-container .swiper-slide:not(.swiper-slide-active) {
+    filter: blur(1px);
+}
+
+.slider-container .card__image {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    border: 5px solid papayawhip;
+    padding: 3px;
+    margin-bottom: 2em;
+}
+
+.slider-container .card__image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.slider-container .card__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slider-container .card__title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    position: relative;
+    top: .2em;
+}
+
+.slider-container .card__name {
+    color: rgb(228, 198, 124);
+}
+
+.slider-container .card__text {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 1em 0;
+}
+
+.slider-container .card__btn {
+    background-color: var(--color);
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    padding: .5em;
+    border-radius: .5em;
+    margin-top: .5em;
+    cursor: pointer;
 }
