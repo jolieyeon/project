@@ -863,39 +863,41 @@ font-weight: 550;
         padding: 10px; /* Adjust padding */
     }
 
-    /* Adjustments for product section */
-    .section .swiper-wrapper {
-        height: 20em; /* Decrease height */
-    }
-
-    .card {
-        width: 15em; /* Decrease width */
-        height: 80%; /* Decrease height */
-        padding: 1em; /* Adjust padding */
-        margin: 0 1em; /* Reduce margin */
-    }
-
-    .card__image {
-        /* Remove styling for card images */
-    }
-
-    .card__title {
-        font-size: 1.2rem; /* Decrease font size */
-    }
-
-    .card__text {
-        font-size: 1rem; /* Decrease font size */
-        margin: .5em 0; /* Adjust margin */
-    }
-
-    .card__btn {
-        padding: .3em 1em; /* Adjust padding */
-        margin-top: .3em; /* Adjust margin */
-        font-size: 1rem; /* Decrease font size */
-    }
-
-    /* Additional adjustments as needed */
+  /* Adjustments for product section */
+.section .swiper-wrapper {
+    height: auto; /* Set height to auto to fit content */
 }
+
+.card {
+    width: 80%; /* Set width to a percentage for responsiveness */
+    max-width: 300px; /* Set a maximum width */
+    height: auto; /* Set height to auto to fit content */
+    padding: 1em; /* Adjust padding */
+    margin: 0 auto 1em; /* Center horizontally and reduce margin */
+}
+
+.card__image {
+    width: 100%; /* Ensure the image fits the container */
+    height: auto; /* Ensure the image maintains aspect ratio */
+    border-radius: 10px; /* Add border radius to match container */
+}
+
+.card__title {
+    font-size: 1.2rem; /* Keep font size as is */
+}
+
+.card__text {
+    font-size: 1rem; /* Keep font size as is */
+    margin: .5em 0; /* Keep margin as is */
+}
+
+.card__btn {
+    padding: .3em 1em; /* Keep padding as is */
+    margin-top: .3em; /* Keep margin as is */
+    font-size: 1rem; /* Keep font size as is */
+}
+
+/* Additional adjustments as needed */
 
 
 @media (max-width: 700px) {
