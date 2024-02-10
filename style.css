@@ -539,86 +539,84 @@ font-weight: 550;
 
 
 /* ----------- SLIDER ------------ */
-.swiper{
-  width: 100%;
+.slider-container .swiper {
+    width: 100%;
 }
 
-.section .swiper-wrapper{
-  width: 100%;
-  height: 35em;
-  display: flex;
-  align-items: center;
+.slider-container .swiper-wrapper {
+    width: 100%;
+    height: 35em;
+    display: flex;
+    align-items: center;
 }
 
-.card{
-  width: 20em;
-  height: 90%;
-  background-color: #fff;
-  border-radius: 2em;
-  box-shadow: 0 0 2em rgba(0, 0, 0, .2);
-  padding: 2em 1em;
-
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
-  margin: 0 2em;
+.slider-container .card {
+    width: 20em;
+    height: 90%;
+    background-color: #fff;
+    border-radius: 2em;
+    box-shadow: 0 0 2em rgba(0, 0, 0, .2);
+    padding: 2em 1em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 2em;
 }
 
-.swiper-slide:not(.swiper-slide-active){
-  filter: blur(1px);
+.slider-container .swiper-slide:not(.swiper-slide-active) {
+    filter: blur(1px);
 }
 
-.card__image{
-  width: 10em;
-  height: 10em;
-  border-radius: 50%;
-  border: 5px solid papayawhip;
-  padding: 3px;
-  margin-bottom: 2em;
+.slider-container .card__image {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    border: 5px solid papayawhip;
+    padding: 3px;
+    margin-bottom: 2em;
 }
 
-.card__image img{
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
+.slider-container .card__image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.card__content{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.slider-container .card__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-.card__title{
-  font-size: 1.5rem;
-  font-weight: 500;
-  position: relative;
-  top: .2em;
+.slider-container .card__title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    position: relative;
+    top: .2em;
 }
 
-.card__name{
-  color:rgb(228, 198, 124);
+.slider-container .card__name {
+    color: rgb(228, 198, 124);
 }
 
-.card__text{
-  text-align: center;
-  font-size: 1.1rem;
-  margin: 1em 0;
+.slider-container .card__text {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 1em 0;
 }
 
-.card__btn{
-  background-color: var(--color);
-  color: #fff;
-  font-size: 1rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  border: none;
-  padding: .5em;
-  border-radius: .5em;
-  margin-top: .5em;
-  cursor: pointer;
+.slider-container .card__btn {
+    background-color: var(--color);
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    padding: .5em;
+    border-radius: .5em;
+    margin-top: .5em;
+    cursor: pointer;
 }
 
 .mySwiper h2{
@@ -767,6 +765,11 @@ font-weight: 550;
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .item:nth-child(n+3) {
+        display: none; /* Hide nth-child picture on smaller screens */
+    }
+}
 
 .buttons{
     position: absolute;
@@ -816,6 +819,17 @@ font-weight: 550;
     margin: 0 auto; /* Center the video horizontally within the section */
   }
 
+
+  @media only screen and (max-width: 768px) {
+    .vid h3 {
+        font-size: medium; /* Reduce font size on smaller screens */
+    }
+
+    .vid video {
+        max-width: 80%; /* Reduce the width of the video on smaller screens */
+    }
+
+}
 
 /* Media query for devices with a maximum width of 700px (typical for iPhones) */
 @media (max-width: 700px) {
@@ -878,12 +892,15 @@ font-weight: 550;
 
 .card__image {
     width: 100%; /* Ensure the image fits the container */
+    max-width: 200px; /* Reduce the maximum width of the image */
     height: auto; /* Ensure the image maintains aspect ratio */
     border-radius: 10px; /* Add border radius to match container */
 }
 
 .card__title {
     font-size: 1.2rem; /* Keep font size as is */
+    max-width: 80%; /* Limit the width of the title */
+    text-align: center; /* Center-align the title */
 }
 
 .card__text {
@@ -899,6 +916,21 @@ font-weight: 550;
 
 /* Additional adjustments as needed */
 
+@media only screen and (max-width: 768px) {
+    .card__title {
+        font-size: 1rem; /* Reduce font size on smaller screens */
+    }
+    .card__text {
+        font-size: 0.9rem; /* Reduce font size on smaller screens */
+    }
+    .card__btn {
+        font-size: 0.9rem; /* Reduce font size on smaller screens */
+    }
+
+    .card__image {
+        max-width: 150px; /* Reduce the maximum width of the image on smaller screens */
+    }
+}
 
 @media (max-width: 700px) {
     /* Adjustments for awareness section */
@@ -1029,11 +1061,4 @@ font-weight: 550;
     margin-top: .5em;
     cursor: pointer;
 }
-
-}
-
-@media only screen and (max-width: 414px) {
-    #myVideo {
-      height: 100%; /* Adjust height for iPhones */
-    }
 }
