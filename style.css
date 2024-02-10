@@ -819,6 +819,17 @@ font-weight: 550;
     margin: 0 auto; /* Center the video horizontally within the section */
   }
 
+  .video-thumbnail {
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+
+
+  .video-player {
+    display: none; /* Hide the video player by default */
+  }
+  
 
   @media only screen and (max-width: 768px) {
     .vid h3 {
