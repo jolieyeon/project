@@ -57,3 +57,16 @@ productContainers.forEach((item, i) => {
         item.scrollLeft -= containerWidth;
     })
 })
+
+
+function playVideo() {
+    var thumbnail = document.querySelector('.video-thumbnail');
+    var videoPlayer = document.querySelector('.video-player');
+    
+    thumbnail.style.display = 'none'; // Hide thumbnail
+    videoPlayer.style.display = 'block'; // Show video player
+    videoPlayer.play(); // Start playing the video
+  }
+  
+
+
