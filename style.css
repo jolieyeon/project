@@ -842,6 +842,16 @@ font-weight: 550;
 
 }
 
+@media screen and (max-width: 768px) {
+    /* Adjustments for smaller screens like iPhones */
+    .vid video.thumbnail {
+        max-width: 100%;
+        /* Ensure the thumbnail takes up the full width of the screen */
+        height: auto;
+        /* Ensure the thumbnail maintains aspect ratio */
+    }
+}
+
 /* Media query for devices with a maximum width of 700px (typical for iPhones) */
 @media (max-width: 700px) {
     /* Adjustments for header */
