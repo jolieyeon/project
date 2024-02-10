@@ -129,9 +129,16 @@ height: 100vh; width: 100%; padding: 3rem 4rem; box-sizing: border-box;">
 </div>
 </section>
 
+
+
 <section class="vid" id="vid">
-  <h3> Here is a short film to raise awareness about Salmonella</h3>
-  <video id="myVideo" src="pbl vid.mp4" controls></video>
+  <h3>Here is a short film to raise awareness about Salmonella</h3>
+  <div id="thumbnail" onclick="playVideo()">
+    <img src="thubnail.png" alt="Video Thumbnail" class="video-thumbnail" onclick="playVideo()">
+  </div>
+  <div id="video-player" class="video-player">
+    <video id="myVideo" src="pbl vid.mp4" controls></video>
+  </div>
 </section>
 
 
